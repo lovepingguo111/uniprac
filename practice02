@@ -1,0 +1,49 @@
+public class PolyMorphism {	
+	public static void main(String[] args) {
+		AnimalCry(new Dog());
+		AnimalCry(new Cat());
+//		Animal a = new Animal();
+//		AnimalCry(a);
+//		Dog d = new Dog();
+//		d.shout();
+//		Cat c = new Cat();
+//		c .shout();
+//		
+//		AnimalCry(d);
+//		AnimalCry(c);
+		Animal a = new Dog();
+		a.shout();
+		Dog d = (Dog) a;
+		d.shout();
+		
+	}
+	
+	static void AnimalCry(Animal a) {
+		a.shout();
+		if(a instanceof Dog) {
+		Dog d = (Dog) a;
+		d.shout();
+		}else if (a instanceof Cat){
+		Cat c = (Cat) a;
+		c.shout();
+		}
+	}
+	
+}
+	class Animal{
+		void shout(){
+			System.out.println("叫了一声");
+		}
+	}
+	
+	class Dog extends Animal {
+		void shout(){
+			System.out.println("汪汪汪..");
+		}
+	}
+
+	class Cat extends Animal {
+		void shout() {
+			System.out.println("喵喵喵...");
+		}
+	}
