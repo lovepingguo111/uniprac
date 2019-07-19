@@ -1,3 +1,3 @@
 # uniprac
 runnoob practice
-this is a practice for study java PolyMorphism
+this is a practice for study java  
